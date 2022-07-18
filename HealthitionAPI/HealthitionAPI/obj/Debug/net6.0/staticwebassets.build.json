@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "QRagBRvcRpFlQJxrpDHIaB9H82ZbXt3bJJXX7bKVzWw=",
+  "Source": "HealthitionAPI",
+  "BasePath": "_content/HealthitionAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
