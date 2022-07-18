@@ -20,6 +20,8 @@ namespace HealthitionAPI.Controllers
             _context = context;
         }
 
+
+
         // DELETE: api/Post/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Post>> DeletePost(int id)
@@ -52,7 +54,7 @@ namespace HealthitionAPI.Controllers
         }
     
 
-    [HttpGet]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Post>>> GetPosts()
         {
             return await _context.Posts.ToListAsync();
@@ -66,6 +68,32 @@ namespace HealthitionAPI.Controllers
 
             await _context.SaveChangesAsync();
             return CreatedAtAction(nameof(PostInfo), new { id = post.id }, post);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutPost(int id, Post post)
+        {
+            post.id = id;
+
+            _context.Entry(post).State = EntityState.Modified;
+
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                if (!PostExists(id))
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    throw;
+                }
+            }
+
+            return NoContent();
         }
     }
 }

@@ -11,6 +11,7 @@ function Post({childToParent}) {
     const [postIsAdded,setPostIsAdded]= useState(false);
 
     useEffect(() => {
+      
         setPost({...post,userId:localStorage.getItem("currentUserId")})
 
     }, [])
