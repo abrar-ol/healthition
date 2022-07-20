@@ -33,7 +33,7 @@ builder.Services.AddSwaggerGen(
             Scheme = "Bearer",
             BearerFormat = "JWT",
             In = ParameterLocation.Header,
-            Description = "Enter ‘Bearer’ [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
+            Description = "Enter ï¿½Bearerï¿½ [space] and then your valid token in the text input below.\r\n\r\nExample: \"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9\"",
 });
 swagger.AddSecurityRequirement(new OpenApiSecurityRequirement
 {

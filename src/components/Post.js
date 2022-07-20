@@ -16,7 +16,7 @@ export default function Post({ posts, childToParent }) {
 
     const updatePost = () => { 
         console.log("updated Post: "+updatedPost.title +" ------ " + updatedPost.post);
-        axios.put("https://localhost:44312/api/Post/" + updatedPost.id, updatedPost,{ headers: { Authorization: AuthStr } })
+        axios.put("http://localhost:44312/api/Post/" + updatedPost.id, updatedPost,{ headers: { Authorization: AuthStr } })
         .then(
             res => {
                 console.log(res);
@@ -35,7 +35,7 @@ export default function Post({ posts, childToParent }) {
 
     const deletePost = (id) => {
         // console.log("onClick id: " + id);
-        axios.delete("https://localhost:44312/api/Post/" + id, { headers: { Authorization: AuthStr } })
+        axios.delete("http://localhost:44312/api/Post/" + id, { headers: { Authorization: AuthStr } })
             .then(
                 res => {
                     console.log(res);

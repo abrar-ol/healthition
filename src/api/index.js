@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const BASE_URL = "https://localhost:44312/";
+export const BASE_URL = "http://localhost:44312/";
 
 export const createAPIEndpoint = endpoint => {
 

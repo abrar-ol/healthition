@@ -21,7 +21,8 @@ const childToParent = (childdata) => {
 
 
     useEffect(() => {
-            axios.get("https://localhost:44312/api/Post", { headers: { Authorization: AuthStr } })
+
+            axios.get("http://localhost:44312/api/Post", { headers: { Authorization: AuthStr } })
             .then(res => {
                 console.log(res);
                 setPosts(res.data);
@@ -37,7 +38,7 @@ const childToParent = (childdata) => {
 
     // useEffect(() => {
     //     const id = setInterval(() => {
-    //         axios.get("https://localhost:44312/api/Post", { headers: { Authorization: AuthStr } })
+    //         axios.get("http://localhost:44312/api/Post", { headers: { Authorization: AuthStr } })
     //         .then(res => {
     //             setPosts(res.data);
     //         })

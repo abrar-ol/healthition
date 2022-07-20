@@ -18,7 +18,7 @@ function Post({childToParent}) {
     
     const addPost=()=>{
        
-        axios.post("https://localhost:44312/api/Post", post,{ headers: { Authorization: AuthStr } })
+        axios.post("http://localhost:44312/api/Post", post,{ headers: { Authorization: AuthStr } })
         .then(res=>{
             console.log(res);
             setPostIsAdded((prevState) => !prevState);
